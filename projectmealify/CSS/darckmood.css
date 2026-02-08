@@ -1,0 +1,252 @@
+:root {
+  --identity-bg: white;
+  --identity-text: black;
+  --main-color: #CE1212;
+  --professional-color: var(--main-color);
+}
+
+/* Toggle icon */
+.moon { display: inline-block; }
+.sun { display: none; }
+
+/* Base light mode */
+body {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+  transition: all 0.3s ease;
+}
+
+/* Light mode button */
+.home-btn {
+  background-color: var(--main-color) !important; /* override Bootstrap */
+  color: #fff !important;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode button */
+body.dark .home-btn {
+  background-color: var(--main-color) !important; /* dark mode variable applies */
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--identity-bg) !important;
+  transition: all 0.3s ease;
+}
+.navbar .nav-link,
+.navbar-brand {
+  color: var(--identity-text) !important;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Sections */
+#Home, #chefs, .gallery, .contact, .footer, .background-image {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+  transition: all 0.3s ease;
+}
+
+/* Cards */
+.card {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+  transition: all 0.3s ease;
+}
+.card-text p {
+  color: var(--identity-text);
+}
+
+
+
+
+
+/* Contact form */
+.contact-inputs input,
+.contact-inputs textarea {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.contact-inputs button {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+.footer h2, .footer h3, .footer p, .footer li, .footer .brands-icons i {
+  color: var(--identity-text);
+}
+
+/* ========== DARK MODE ========== */
+body.dark {
+  --identity-bg: #121212;
+  --identity-text: #fff;
+  --main-color: #C17E1F;
+  --professional-color: #C17E1F;
+}
+
+body.dark {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+}
+
+body.dark .navbar {
+  background-color: var(--identity-bg) !important;
+}
+body.dark .navbar .nav-link,
+body.dark .navbar-brand {
+  color: var(--identity-text) !important;
+}
+
+body.dark #Home,
+body.dark #chefs,
+body.dark .gallery,
+body.dark .contact,
+body.dark .footer,
+body.dark .background-image {
+  background-color: var(--identity-bg);
+  color: var(--identity-text);
+}
+
+body.dark .card {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+body.dark .card-text p {
+  color: #ccc;
+}
+
+body.dark .contact-inputs input,
+body.dark .contact-inputs textarea {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .contact-inputs button {
+  background-color: var(--main-color);
+}
+body.dark .contact-inputs button:hover {
+  background-color: #B06A1B;
+}
+
+body.dark .brands {
+  background-color: rgba(0,0,0,0.8);
+}
+body.dark .brands i {
+  color: #fff;
+}
+
+/* Toggle icons */
+body.dark .moon { display: none; }
+body.dark .sun { display: inline-block; }
+
+/* Footer always dark in light mode */
+.footer {
+  background-color: #1a1a1a;  /* Dark color */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Footer in dark mode (optional: slightly different) */
+body:has(#toggle-btn:checked) .footer {
+  background-color: #121212;  /* Darker color in dark mode */
+  color: #fff;
+}
+
+/* Footer links and text */
+.footer a,
+.footer h2,
+.footer h3,
+.footer p,
+.footer li {
+  color: #fff; /* Keep white in light and dark */
+}
+
+body:has(#toggle-btn:checked) .footer a,
+body:has(#toggle-btn:checked) .footer h2,
+body:has(#toggle-btn:checked) .footer h3,
+body:has(#toggle-btn:checked) .footer p,
+body:has(#toggle-btn:checked) .footer li {
+  color: #fff; /* Keep white in dark mode too */
+}
+body.dark .footer-content button {
+  background-color: var(--main-color);
+}
+body.dark .footer-content-inputs button:hover {
+  background-color: #B06A1B;
+}
+body.dark .contact.icon {
+  background-color: var(--main-color);
+}
+body.dark .contact.icon:hover {
+  background-color: #B06A1B;}
+
+body.dark .contact .icon {
+    background-color: var(--main-color);  /* circle color changes in dark mode */
+}
+
+body.dark .contact .icon i {
+    color: #fff;  /* icon stays white inside circle */
+}
+/* Light mode: red icons */
+.get-in-touch .contact-icon {
+    color: #CE1212;  /* original red */
+    transition: color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark .get-in-touch .contact-icon {
+    color: #C17E1F;       /* dark mode color */
+}
+
+body.dark .get-in-touch ul li {
+    color: #fff;          /* text color in dark mode */
+}
+
+/*---------------------------------*/
+
+
+/* Light mode – original red */
+.contact-touch-icon {
+  color: #CE1212;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode – STILL original red */
+body.dark .contact-touch-icon {
+  color: #C17E1F;     
+}
+
+/* Dark mode text */
+body.dark .get-in-touch li {
+  color: #fff;
+}
+.contact-touch-icon:hover {
+  color: #b10f0f;
+}
+
+body.dark .sections-header h2 span {
+   color: #C17E1F;  
+}
+body.dark .high-light {
+    color: #C17E1F;  
+}
+body .dark .sections-header span {
+  color: #fff;
+}
+
+
+/*-------------------------*/
+
+
+
+
